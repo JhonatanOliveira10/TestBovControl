@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "f3218e84-ed95-405e-87dd-076309affb1b",
+		"name": "Test Bov",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Farmer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jhonatan\",\r\n    \"email\": \"jhonatan@gmail.com\",\r\n    \"cpf\": \"775.803.930-85\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/farmer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farmer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Farmer By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/farmer/368836",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farmer",
+						"368836"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Farm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fazenda Araucarias\",\r\n    \"distance\": 12,\r\n    \"farmer_id\": \"6271d81876556583e806c607\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/farm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Production per Day",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount_milk\": 400,\r\n    \"date\": \"2022-01-18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/farm/6271d81f76556583e806c608",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farm",
+						"6271d81f76556583e806c608"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns the monthly average of milk informing a month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/farm/6271d81f76556583e806c608/production-milk-for-month/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farm",
+						"6271d81f76556583e806c608",
+						"production-milk-for-month",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns the price of milk per month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/farm/873489/price-per-liter/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farm",
+						"873489",
+						"price-per-liter",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns the price of milk per year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/farm/873489/price-per-liter-per-year/2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"farm",
+						"873489",
+						"price-per-liter-per-year",
+						"2022"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
