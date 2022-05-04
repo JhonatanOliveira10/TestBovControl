@@ -26,6 +26,7 @@ Para a aplicação solicitada foi pensado em duas entidades basicas
 Para simplificação da modelagem adotei que um fazenda pertence a apenas um fazendeiro e um fazendeiro tem apenas uma fazenda.
 Também considerei como facilitador que todos os meses do ano teem 30 dias para calculo de valor do leite.
 
+Dentro do projeto inseri a collection do postman para a realização dos testes
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
